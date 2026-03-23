@@ -1,7 +1,7 @@
 <?php
 get_header();
 ?>
-
+<main class="site-main">
 <div class="hero-about-wrapper">
     <!-- Hero Section -->
     <section class="hero-section" style="background-image: url('<?php echo esc_url( get_template_directory_uri() . '/assets/images/Mumbai Skyline.webp' ); ?>');">
@@ -99,6 +99,9 @@ get_header();
 
     <!-- Trusted by Builders Section -->
     <section class="trusted-builders-section gsap-reveal-section">
+        <div class="border-expand top"></div>
+        <div class="border-expand bottom"></div>
+        
         <div class="container">
             <div class="text-mask"><h3 class="trusted-title">Trusted by Builders.</h3></div>
             
@@ -380,5 +383,5 @@ get_header();
             </div>
         </div>
     </section>
-
+</main>
 <?php get_footer(); ?>

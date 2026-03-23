@@ -63,8 +63,8 @@ document.addEventListener("DOMContentLoaded", function () {
       // Reveal the large nav links and secondary elements sequentially
       .to(
         ".menu-text-mask a, .menu-reveal-item",
-        { yPercent: 0, duration: 0.7, stagger: 0.05, ease: "power3.out" },
-        "-=0.7",
+        { yPercent: 0, duration: 1, stagger: 0.05, ease: "power3.out" },
+        "-=0.75",
       );
 
     menuBtn.addEventListener("click", () => {
@@ -214,6 +214,16 @@ document.addEventListener("DOMContentLoaded", function () {
           { scale: 1.2 },
           { scale: 1, duration: 1.2, stagger: 0.2, ease: "power3.out" },
           "<", // sync with clip path animation
+        );
+      }
+
+      // 3. Border expansion reveal
+      const expandableBorders = section.querySelectorAll(".border-expand");
+      if (expandableBorders.length > 0) {
+        tl.to(
+          expandableBorders,
+          { scaleX: 1, duration: 1, ease: "power3.inOut" },
+          "<0.3", // Starts slightly after images or text
         );
       }
     });
