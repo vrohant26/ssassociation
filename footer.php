@@ -9,11 +9,10 @@
         
         <!-- CTA Top Block -->
         <div class="cta-section gsap-reveal-section" style="background-image: url('<?php echo esc_url( get_template_directory_uri() . '/assets/images/CTA Footer Background.png' ); ?>');">
-            <!-- <div class="cta-gradient-overlay"></div> -->
             <div class="container container-large" style="position: relative; z-index: 2;">
                 <div class="cta-content text-mask">
                     <h2 class=" fs-xxxl section-title">Looking for a Focused<br>Sales Mandate?</h2>
-                    <a href="#" class="btn btn-secondary cta-btn"><span class="arrow-up-right"><svg width="1.2em" height="1.2em" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;"><g clip-path="url(#clip0_98_87)"><g clip-path="url(#clip1_98_87)"><path d="M6.27241 6H14.0504V13.778M13.1704 6.879L6.02441 14.026" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></g></g><defs><clipPath id="clip0_98_87"><rect width="20" height="20" fill="currentColor"/></clipPath><clipPath id="clip1_98_87"><rect width="20" height="20" fill="currentColor"/></clipPath></defs></svg></span> Let's talk</a>
+                    <a href="#" class="btn btn-secondary cta-btn"><span class="arrow-up-right"><svg width="1.2em" height="1.2em" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;"><path d="M6.27241 6H14.0504V13.778M13.1704 6.879L6.02441 14.026" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg></span> Let's talk</a>
                 </div>
                 
                 <div class="cta-stats-overlay">
@@ -47,7 +46,7 @@
                         <div class="footer-col text-mask">
                             <h4 class="footer-col-title">MENU</h4>
                             <ul class="footer-menu">
-                                <li><a href="#">ABOUT</a></li>
+                                <li><a href="<?php echo esc_url( home_url( '/about/' ) ); ?>">ABOUT</a></li>
                                 <li><a href="#">SERVICES</a></li>
                                 <li><a href="#">PROJECTS</a></li>
                                 <li><a href="#">CONTACT</a></li>

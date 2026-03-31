@@ -119,7 +119,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       } else {
         // Returned precisely to the top
-        if (header.classList.contains("is-stuck")) {
+        if (
+          header.classList.contains("is-stuck") &&
+          !header.classList.contains("always-stuck")
+        ) {
           header.classList.remove("is-stuck");
           if (typeof gsap !== "undefined") {
             gsap.set(header, { yPercent: 0 }); // reset layout natively
@@ -226,11 +229,44 @@ document.addEventListener("DOMContentLoaded", function () {
           "<0.3", // Starts slightly after images or text
         );
       }
+      // 4. Floating Card Subtle Parallax (Desktop Only)
+      const floatingCards = section.querySelectorAll(".about-floating-card");
+      if (floatingCards.length > 0) {
+        let mm = gsap.matchMedia();
+        mm.add("(min-width: 993px)", () => {
+          floatingCards.forEach((card) => {
+            gsap.to(card, {
+              y: -80, // Subtly float up 80px relative to its container
+              ease: "none",
+              scrollTrigger: {
+                trigger: section, // Bind strictly to the parent wrapper lifetime
+                start: "top bottom", // Begin tracking when the card enters viewport
+                end: "bottom top", // End when section leaves viewport
+                scrub: 0.5, // 0.5 for mild interpolation smoothing
+              },
+            });
+          });
+        });
+      }
     });
   } // End of Generic GSAP block
 
   // Process Slider Initialization with Swiper
   if (typeof Swiper !== "undefined") {
+    const heroBgSwiper = new Swiper(".hero-bg-swiper", {
+      loop: true,
+      effect: "fade",
+      fadeEffect: {
+        crossFade: true,
+      },
+      speed: 1500,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      allowTouchMove: false,
+    });
+
     const processSwiper = new Swiper(".process-swiper", {
       loop: true,
       speed: 600,

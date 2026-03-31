@@ -22,7 +22,7 @@
                     <span class="close-icon" style="font-size: 1em; margin-right : 0.5rem ; display: inline-block; vertical-align: middle; line-height: 1;">✕</span> CLOSE
                 </button>
                 <a href="#" class="btn btn-secondary btn-discovery">
-                    <span class="arrow-up-right"><svg width="1.2em" height="1.2em" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;"><g clip-path="url(#clip0_98_87)"><g clip-path="url(#clip1_98_87)"><path d="M6.27241 6H14.0504V13.778M13.1704 6.879L6.02441 14.026" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></g></g><defs><clipPath id="clip0_98_87"><rect width="20" height="20" fill="currentColor"/></clipPath><clipPath id="clip1_98_87"><rect width="20" height="20" fill="currentColor"/></clipPath></defs></svg></span> BOOK A DISCOVERY CALL
+                    <span class="arrow-up-right"><svg width="1.2em" height="1.2em" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;"><path d="M6.27241 6H14.0504V13.778M13.1704 6.879L6.02441 14.026" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg></span> BOOK A DISCOVERY CALL
                 </a>
             </div>
         </div>
@@ -31,7 +31,7 @@
             <div class="fp-links-col">
                 <nav class="fp-nav">
                     <ul>
-                        <li><div class="menu-text-mask"><a href="#">ABOUT</a></div></li>
+                        <li><div class="menu-text-mask"><a href="<?php echo esc_url( home_url( '/about/' ) ); ?>">ABOUT</a></div></li>
                         <li><div class="menu-text-mask"><a href="#">SERVICES</a></div></li>
                         <li><div class="menu-text-mask"><a href="#">INSIGHTS</a></div></li>
                         <li><div class="menu-text-mask"><a href="#">CONTACT</a></div></li>
@@ -74,7 +74,7 @@
     </div>
 
 <div id="page" class="site">
-    <header class="site-header" id="site-header">
+    <header class="site-header <?php echo is_page_template('about.php') ? 'is-stuck always-stuck' : ''; ?>" id="site-header">
         <div class="header-left">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="custom-logo-link">
                 <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/logo-white.svg' ); ?>" alt="S&S Associates Logo" class="header-logo-img">
@@ -85,7 +85,7 @@
                 <span class="menu-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24" style="vertical-align: middle;"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17h8M5 12h14m-8-5h8"/></svg></span> MENU
             </button>
             <a href="#" class="btn btn-secondary btn-discovery">
-                <span class="arrow-up-right"><svg width="1.2em" height="1.2em" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;"><g clip-path="url(#clip0_98_87)"><g clip-path="url(#clip1_98_87)"><path d="M6.27241 6H14.0504V13.778M13.1704 6.879L6.02441 14.026" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></g></g><defs><clipPath id="clip0_98_87"><rect width="20" height="20" fill="white"/></clipPath><clipPath id="clip1_98_87"><rect width="20" height="20" fill="white"/></clipPath></defs></svg></span> BOOK A DISCOVERY CALL
+                <span class="arrow-up-right"><svg width="1.2em" height="1.2em" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;"><path d="M6.27241 6H14.0504V13.778M13.1704 6.879L6.02441 14.026" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg></span> BOOK A DISCOVERY CALL
             </a>
         </div>
     </header>

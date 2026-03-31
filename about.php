@@ -1,134 +1,104 @@
 <?php
+/* Template Name: About Page */
 get_header();
 ?>
 <main class="site-main">
-<div class="hero-about-wrapper">
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <!-- Hero Background Slider -->
-        <div class="swiper hero-bg-swiper" style="position: absolute; top:0; left:0; width:100%; height:100%; z-index:0;">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide bg-slide" style="background-image: url('<?php echo esc_url( get_template_directory_uri() . '/assets/images/Mumbai.webp' ); ?>'); background-size: cover; background-position: center;"></div>
-                <div class="swiper-slide bg-slide" style="background-image: url('<?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-image-2.jpeg' ); ?>'); background-size: cover; background-position: center;"></div>
-            </div>
-        </div>
 
-        <div class="hero-overlay" style="z-index:1;"></div>
-
-        <div class="hero-content">
-            <div class="hero-text-content">
-                <div class="hero-brand">
-                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/logo-white.svg' ); ?>" alt="S&S Associates Logo" class="hero-brand-img" >
-                </div>
-                
-                <h1 class="hero-title fs-xxxl">Built for<br>Developers Who<br>Value Execution</h1>
-                <p class="hero-subtitle fs-md">Backed by a network of <b> 300+ channel partners </b>, we deliver structured sales execution and consistent project outcomes.</p>
-                
-                <a href="#" class="hero-cta">
-                    <span class="arrow-up-right"><svg width="1.2em" height="1.2em" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;"><path d="M6.27241 6H14.0504V13.778M13.1704 6.879L6.02441 14.026" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg></span> <u>START YOUR JOURNEY</u>
-                </a>
-            </div>
-            
-            <div class="hero-scroll-indicator">
-                <div class="mouse-icon"></div>
-            </div>
-
-            <div class="hero-featured-card">
-                <div class="card-image-wrap">
-                    <!-- Placeholder representing the project blueprint image in design -->
-                   <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/Elysium Project Thumbnail.png' ); ?>" alt="Elysium Project Thumbnail" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div class="card-content">
-                    <h3 class="card-title">Elysium – Contemporary Urban Living</h3>
-                    <p class="card-subtitle">Thoughtfully Designed Homes<br>in Prime Location</p>
-                    <a href="#" class="card-link"><span class="arrow-up-right"><svg width="1.2em" height="1.2em" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;"><path d="M6.27241 6H14.0504V13.778M13.1704 6.879L6.02441 14.026" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg></span> VIEW PROJECT</a>
+    <!-- Unified GSAP Wrapper for Hero & Work -->
+    <div class="about-hero-combined gsap-reveal-section">
+        <!-- About Hero Section -->
+        <section class="about-hero">
+            <div class="about-hero-container">
+                <div class="about-hero-text">
+                    <div class="text-mask">
+                        <div class="section-tag">
+                            <span class="diamond-icon">◆</span> ABOUT S&S ASSOCIATES
+                        </div>
+                    </div>
+                    <div class="text-mask">
+                        <h1 class="hero-title fs-xxxl">Built on Mandates.<br>Driven by Execution.</h1>
+                    </div>
+                    <div class="text-mask">
+                        <p class="about-hero-desc fs-md">
+                            S&S Associates is a specialised real estate mandate advisory firm working closely with residential developers to deliver structured sales execution and market-aligned strategies. We operate as an extension of our partners’ teams—bringing clarity to positioning, discipline to execution, and consistency to outcomes across the sales lifecycle.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- End Hero Section -->
+        </section>
 
-    <!-- About Section -->
-    <section class="about-section gsap-reveal-section">
-        <div class="container">
+        <!-- Work With Us / Image Section -->
+        <section class="work-with-us-section">
+            <div class="work-container">
+                <div class="work-left text-mask">
+                    <!-- Beige Floating Card -->
+                    <div class="about-floating-card">
+                        <p>We collaborate with select developers on exclusive mandates—aligning strategy, execution, and sales outcomes under one disciplined framework.</p>
+                        <a href="#" class="btn-discovery cta-inline-link">WORK WITH US <span class="arrow-up-right" style="margin-left:5px;"><svg width="1em" height="1em" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;"><path d="M6.27241 6H14.0504V13.778M13.1704 6.879L6.02441 14.026" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg></span></a>
+                    </div>
+                </div>
+                <div class="work-right">
+                    <div class="about-hero-image-wrap img-reveal">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/about hero image.png' ); ?>" alt="Office Space">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Our Purpose Section -->
+    <section class="our-purpose-section gsap-reveal-section">
+        <div class="">
             <div class="text-mask">
                 <div class="section-tag">
-                    <span class="diamond-icon">◆</span> ABOUT S&S ASSOCIATES
+                    <span class="diamond-icon">◆</span> OUR PURPOSE
                 </div>
             </div>
             
             <div class="text-mask">
-                <h2 class="section-title fs-xxl">S&S Associates is a specialised real estate mandate advisory firm focused on structured, intelligence-led residential sales execution.</h2>
+                <h2 class="section-title fs-xxl" style="max-width: 800px; margin-bottom: 2rem;">A Purpose Built on Clarity, Structure, and Disciplined Sales Execution</h2>
             </div>
             
             <div class="text-mask">
-                <p class="section-desc fs-md">
-                    We work with select residential developments to deliver disciplined sales execution, informed market positioning, and refined home-buying experiences through a focused, mandate-driven approach.
+                <p class="section-desc fs-md" style="max-width: 700px; margin-bottom: 4rem;">
+                    We operate with clear guidelines and deep strategic focus, building on over two decades of residential sales execution. At the core, we believe that focused execution and consistent market alignment drive true outcomes.
                 </p>
             </div>
-
-            <div class="stats-grid">
-                <!-- Col 1 -->
-                <div class="stat-card">
-                    <div class="stat-image-wrap img-reveal">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/about image 1.png' ); ?>" alt="Office Space">
-                    </div>
-                    <div class="stat-content">
-                        <div class="text-mask"><h4 class="stat-heading fs-sm">10+ YEARS OF TRUSTED GUIDANCE</h4></div>
-                        <div class="text-mask"><p class="stat-text fs-xs">Over a decade, S&S Associates has delivered consistent, disciplined mandate-led guidance across select residential real estate developments.</p></div>
+            
+            <div class="purpose-grid">
+                <!-- Card 1 -->
+                <div class="purpose-card text-mask">
+                    <div class="purpose-card-inner">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/aim-icon.svg' ); ?>" alt="Aim" class="purpose-icon">
+                        <h4 class="purpose-title">STRATEGIC MANDATE SALES CAPABILITIES</h4>
                     </div>
                 </div>
-                
-                <!-- Col 2 -->
-                <div class="stat-card">
-                    <div class="stat-image-wrap img-reveal">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/about image 2.png' ); ?>" alt="Building">
-                    </div>
-                    <div class="stat-content">
-                        <div class="text-mask"><h4 class="stat-heading fs-sm ">₹10 CR+ IN SUCCESSFULLY CLOSED RESIDENTIAL SALES</h4></div>
-                        <div class="text-mask"><p class="stat-text fs-xs">This reflects disciplined mandate execution and focused sales strategies delivering steady residential closures.</p></div>
+                <!-- Card 2 -->
+                <div class="purpose-card text-mask">
+                    <div class="purpose-card-inner">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/handshake-icon.svg' ); ?>" alt="Handshake" class="purpose-icon">
+                        <h4 class="purpose-title">ALIGNING DEVELOPER GOALS & BUYER ASPIRATIONS</h4>
                     </div>
                 </div>
-
-                <!-- Col 3 -->
-                <div class="stat-card">
-                    <div class="stat-image-wrap img-reveal">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/about image 3.png' ); ?>" alt="Apartment Complex">
+                <!-- Card 3 -->
+                <div class="purpose-card text-mask">
+                    <div class="purpose-card-inner">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/network-icon.svg' ); ?>" alt="Network" class="purpose-icon">
+                        <h4 class="purpose-title">EXCLUSIVE NETWORK FOR REFINED HOME BUYING</h4>
                     </div>
-                    <div class="stat-content">
-                        <div class="text-mask"><h4 class="stat-heading fs-sm">600+ HOMES SUCCESSFULLY SOLD</h4></div>
-                        <div class="text-mask"><p class="stat-text fs-xs">This  reflects focused mandate execution, consistent buyer alignment, and disciplined sales processes across all projects.</p></div>
+                </div>
+                <!-- Card 4 -->
+                <div class="purpose-card text-mask">
+                    <div class="purpose-card-inner">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/uptrend.svg' ); ?>" alt="Uptrend" class="purpose-icon">
+                        <h4 class="purpose-title">CONSISTENT <br> SALES EXECUTION</h4>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-</div> <!-- /hero-about-wrapper -->
 
-    <!-- Trusted by Builders Section -->
-    <section class="trusted-builders-section gsap-reveal-section">
-        <div class="border-expand top"></div>
-        <div class="border-expand bottom"></div>
-        
-        <div class="container">
-            <div class="text-mask"><h3 class="trusted-title">Trusted by Builders.</h3></div>
-            
-            <div class="builders-grid">
-                <div class="builder-logo-wrap img-reveal">
-                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/elite.png' ); ?>" alt="Elite">
-                </div>
-                <div class="builder-logo-wrap img-reveal">
-                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/Matrix.png' ); ?>" alt="Matrix">
-                </div>
-                <div class="builder-logo-wrap img-reveal">
-                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/Kripa Elite Background Removed.png' ); ?>" alt="Kripa Elite">
-                </div>
-                <div class="builder-logo-wrap img-reveal">
-                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/MK IMPERIAL LOGO.png' ); ?>" alt="MK Imperial">
-                </div>
-            </div>
-        </div>
-    </section>    <!-- Process Section -->
+    <!-- Process Section -->
     <section class="process-section gsap-reveal-section">
         <div class="container">
             <div class="process-header">
