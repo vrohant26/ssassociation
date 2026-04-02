@@ -225,6 +225,8 @@ button {
     flex: 1;
     min-width: 320px;
     padding-bottom: 2rem;
+    overflow: hidden;
+    /* clips text during entry animation */
 }
 
 .hero-brand {
@@ -275,6 +277,7 @@ button {
     justify-content: center;
     padding-bottom: 2.5rem;
     width: 100px;
+    opacity: 0;
 }
 
 .mouse-icon {

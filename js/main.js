@@ -324,4 +324,121 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     });
   }
+
+  // ============================================================
+  // FRONT-PAGE ENTRY ANIMATION
+  // Runs once on page load — scoped to body.home only.
+  // ============================================================
+  if (
+    document.body.classList.contains("home") &&
+    typeof gsap !== "undefined" &&
+    typeof SplitType !== "undefined"
+  ) {
+    // ---- Targets ----
+    const heroBg = document.querySelector(".hero-bg-swiper");
+    const heroBrand = document.querySelector(".hero-brand");
+    const heroTitle = document.querySelector(".hero-title");
+    const heroSub = document.querySelector(".hero-subtitle");
+    const heroCta = document.querySelector(".hero-cta");
+    const heroCard = document.querySelector(".hero-featured-card");
+    const siteHeader = document.getElementById("site-header");
+    const mouseScroll = document.querySelector(".hero-scroll-indicator");
+
+    // ---- Helper: SplitType lines with overflow:hidden per line ----
+    function splitAndWrap(el) {
+      if (!el) return [];
+      const split = new SplitType(el, { types: "lines" });
+      split.lines.forEach((line) => {
+        const inner = line.innerHTML;
+        line.innerHTML = "";
+        line.style.overflow = "hidden";
+        line.style.display = "block";
+        const innerWrap = document.createElement("div");
+        innerWrap.className = "entry-line-inner";
+        innerWrap.innerHTML = inner;
+        line.appendChild(innerWrap);
+      });
+      return split.lines.map((l) => l.querySelector(".entry-line-inner"));
+    }
+
+    // ---- Helper: move all children into an inner div ----
+    // Outer el gets overflow:hidden and stays in place.
+    // The returned inner div is what GSAP animates upward.
+    function wrapInner(el, cls) {
+      if (!el) return null;
+      const inner = document.createElement("div");
+      inner.className = cls;
+      while (el.firstChild) inner.appendChild(el.firstChild);
+      el.appendChild(inner);
+      el.style.overflow = "hidden";
+      return inner;
+    }
+
+    // ---- Split text into lines ----
+    const titleInners = splitAndWrap(heroTitle);
+    const subInners = splitAndWrap(heroSub);
+
+    // ---- Inner wrappers for brand + CTA ----
+    const brandInner = wrapInner(heroBrand, "entry-brand-inner");
+    const ctaInner = wrapInner(heroCta, "entry-cta-inner");
+
+    // ---- Set initial hidden states ----
+    gsap.set(heroBg, { scale: 0.5, transformOrigin: "center center" });
+    gsap.set(siteHeader, { yPercent: -100, opacity: 0 });
+    gsap.set(brandInner, { yPercent: 110 });
+    gsap.set(ctaInner, { yPercent: 110 });
+    if (titleInners.length) gsap.set(titleInners, { yPercent: 110 });
+    if (subInners.length) gsap.set(subInners, { yPercent: 110 });
+    gsap.set(heroCard, { clipPath: "inset(0% 0 100% 0)" });
+
+    // ---- Entry timeline ----
+    const entryTl = gsap.timeline({ delay: 0.2 });
+
+    entryTl
+      // 1. BG scales from 0.5 → 1
+      .to(heroBg, { scale: 1, duration: 1.8, ease: "expo.inOut" })
+
+      // 2. Header slides down
+      .to(
+        siteHeader,
+        { yPercent: 0, opacity: 1, duration: 1.2, ease: "expo.inOut" },
+        "<0.3",
+      )
+
+      // 3. Brand inner slides up (img stays inside, outer clips it)
+      .to(
+        brandInner,
+        { yPercent: 0, duration: 1.0, ease: "expo.inOut" },
+        "<0.1",
+      )
+
+      // 4. Title lines stagger up
+      .to(
+        titleInners,
+        { yPercent: 0, duration: 1.2, stagger: 0.08, ease: "expo.inOut" },
+        "<0.1",
+      )
+
+      // 5. Subtitle lines stagger up
+      .to(
+        subInners,
+        { yPercent: 0, duration: 1.1, stagger: 0.06, ease: "expo.inOut" },
+        "<0.15",
+      )
+
+      // 6. CTA inner slides up (arrow + text inside, outer clips it)
+      .to(ctaInner, { yPercent: 0, duration: 1.0, ease: "expo.inOut" }, "<0.1")
+
+      // 7. Featured card clips in
+      .to(
+        heroCard,
+        { clipPath: "inset(0% 0 0% 0)", duration: 1.4, ease: "expo.inOut" },
+        "<0.1",
+      )
+      .to(
+        mouseScroll,
+        { opacity: 1, duration: 1.0, ease: "expo.inOut" },
+        "<0.1",
+      );
+  }
 });
