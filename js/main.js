@@ -153,6 +153,23 @@ document.addEventListener("DOMContentLoaded", function () {
         },
       });
 
+      // 0. Card Reveal (clip-path down) using generic .card-reveal
+      const cards = section.querySelectorAll(".card-reveal");
+      let hasCards = false;
+      if (cards.length > 0) {
+        hasCards = true;
+        tl.fromTo(
+          cards,
+          { clipPath: "inset(0% 0 100% 0)" },
+          {
+            clipPath: "inset(0% 0 0% 0)",
+            duration: 1.2,
+            stagger: 0.15,
+            ease: "power3.inOut",
+          },
+        );
+      }
+
       // 1. Text slide up reveal line-by-line using Generic .text-mask wrapper
       const textBlocks = section.querySelectorAll(".text-mask > *");
       let elementsToAnimate = [];
@@ -189,12 +206,16 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       if (elementsToAnimate.length > 0) {
-        tl.from(elementsToAnimate, {
-          y: "150%", // slide up from below
-          duration: 1,
-          stagger: 0.1,
-          ease: "power4.out",
-        });
+        tl.from(
+          elementsToAnimate,
+          {
+            y: "150%", // slide up from below
+            duration: 1,
+            stagger: 0.1,
+            ease: "power4.out",
+          },
+          hasCards ? "<0.5" : null, // If cards are revealing, start texts halfway through the clip. Otherwise start instantly.
+        );
       }
 
       // 2. Image reveal (clip-path and scale) using generic .img-reveal
@@ -202,9 +223,9 @@ document.addEventListener("DOMContentLoaded", function () {
       if (images.length > 0) {
         tl.fromTo(
           images,
-          { clipPath: "inset(100% 0 0 0)" },
+          { clipPath: "inset(0% 0 100% 0)" },
           {
-            clipPath: "inset(0% 0 0 0)",
+            clipPath: "inset(0% 0 0% 0)",
             duration: 1.2,
             stagger: 0.2,
             ease: "power3.inOut",

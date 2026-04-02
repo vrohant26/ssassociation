@@ -21,10 +21,10 @@ get_header();
                     <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/logo-white.svg' ); ?>" alt="S&S Associates Logo" class="hero-brand-img" >
                 </div>
                 
-                <h1 class="hero-title fs-xxxl">Built for<br>Developers Who<br>Value Execution</h1>
+                <h1 class="hero-title fs-xxxl">Service. Value. Transparency</h1>
                 <p class="hero-subtitle fs-md">Backed by a network of <b> 300+ channel partners </b>, we deliver structured sales execution and consistent project outcomes.</p>
                 
-                <a href="#" class="hero-cta">
+                <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="hero-cta">
                     <span class="arrow-up-right"><svg width="1.2em" height="1.2em" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;"><path d="M6.27241 6H14.0504V13.778M13.1704 6.879L6.02441 14.026" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg></span> <u>START YOUR JOURNEY</u>
                 </a>
             </div>
@@ -141,7 +141,7 @@ get_header();
                     <div class="text-mask"><h2 class="section-title fs-xxl" style="margin-bottom: 0;">How We Deliver<br>Mandate Success</h2></div>
                 </div>
                 <div class="process-header-right">
-                    <a href="#" class="btn btn-primary"><span class="arrow-up-right"><svg width="1.2em" height="1.2em" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;"><path d="M6.27241 6H14.0504V13.778M13.1704 6.879L6.02441 14.026" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg></span> START YOUR JOURNEY</a>
+                    <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-primary"><span class="arrow-up-right"><svg width="1.2em" height="1.2em" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;"><path d="M6.27241 6H14.0504V13.778M13.1704 6.879L6.02441 14.026" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg></span> START YOUR JOURNEY</a>
                 </div>
             </div>
 
@@ -183,7 +183,7 @@ get_header();
                 <div class="swiper process-swiper">
                     <div class="swiper-wrapper">
                         <?php foreach ($process_slides as $index => $slide) : ?>
-                            <div class="swiper-slide process-slide">
+                            <div class="swiper-slide process-slide card-reveal">
                                 <div class="slide-content">
                                     <div class="text-mask"><span class="slide-step"><?php echo esc_html($slide['step']); ?></span></div>
                                     <div class="text-mask"><h3 class="slide-title"><?php echo esc_html($slide['title']); ?></h3></div>
@@ -272,7 +272,7 @@ get_header();
                             ?>
                             <?php foreach ($success_projects as $index => $project) : ?>
                             <div class="swiper-slide">
-                                <div class="project-card">
+                                <div class="project-card card-reveal">
                                     <div class="project-image img-reveal">
                                         <img src="<?php echo esc_url($project['image']); ?>" alt="<?php echo esc_attr($project['title']); ?>">
                                     </div>
@@ -325,13 +325,13 @@ get_header();
                     </p>
                 </div>
                 <div class="text-mask" style="display: flex; justify-content: center;">
-                    <a href="#" class="btn btn-primary" style="font-size: 0.8rem; padding: 1rem 2rem; border: none;"><span class="arrow-up-right"><svg width="1.2em" height="1.2em" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;"><path d="M6.27241 6H14.0504V13.778M13.1704 6.879L6.02441 14.026" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg></span> START YOUR JOURNEY</a>
+                    <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-primary" style="font-size: 0.8rem; padding: 1rem 2rem; border: none;"><span class="arrow-up-right"><svg width="1.2em" height="1.2em" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;"><path d="M6.27241 6H14.0504V13.778M13.1704 6.879L6.02441 14.026" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg></span> START YOUR JOURNEY</a>
                 </div>
             </div>
 
             <div class="reviews-grid">
                 <!-- Large Review Card -->
-                <div class="review-card large-card text-mask">
+                <div class="review-card large-card text-mask card-reveal">
                     <div class="quote-mark">”</div>
                     <div class="review-content" style="position: relative; z-index: 2;">
                         <p class="reviewer-meta"><span class="diamond-icon">◆</span> DEVELOPER PARTERN'S NAME, MK IMPERIALS</p>
@@ -342,7 +342,7 @@ get_header();
 
                 <!-- Right Column (Stacked Cards) -->
                 <div class="reviews-right-col">
-                    <div class="review-card text-mask">
+                    <div class="review-card text-mask card-reveal">
                         <div class="quote-mark">”</div>
                         <div class="review-content" style="position: relative; z-index: 2;">
                             <p class="reviewer-meta"><span class="diamond-icon">◆</span> DEVELOPER PARTERN'S NAME, MK IMPERIALS</p>
@@ -351,7 +351,7 @@ get_header();
                         </div>
                     </div>
 
-                    <div class="review-card text-mask">
+                    <div class="review-card text-mask card-reveal">
                         <div class="quote-mark">”</div>
                         <div class="review-content" style="position: relative; z-index: 2;">
                             <p class="reviewer-meta"><span class="diamond-icon">◆</span> DEVELOPER PARTERN'S NAME, MK IMPERIALS</p><br>

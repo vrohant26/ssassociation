@@ -30,11 +30,11 @@ get_header();
         <!-- Work With Us / Image Section -->
         <section class="work-with-us-section">
             <div class="work-container">
-                <div class="work-left text-mask">
+                <div class="work-left">
                     <!-- Beige Floating Card -->
-                    <div class="about-floating-card">
-                        <p>We collaborate with select developers on exclusive mandates—aligning strategy, execution, and sales outcomes under one disciplined framework.</p>
-                        <a href="#" class="btn-discovery cta-inline-link">WORK WITH US <span class="arrow-up-right" style="margin-left:5px;"><svg width="1em" height="1em" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;"><path d="M6.27241 6H14.0504V13.778M13.1704 6.879L6.02441 14.026" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg></span></a>
+                    <div class="about-floating-card card-reveal">
+                        <div class="text-mask"><p>We collaborate with select developers on exclusive mandates—aligning strategy, execution, and sales outcomes under one disciplined framework.</p></div>
+                        <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn-discovery cta-inline-link">WORK WITH US <span class="arrow-up-right" style="margin-left:5px;"><svg width="1em" height="1em" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;"><path d="M6.27241 6H14.0504V13.778M13.1704 6.879L6.02441 14.026" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg></span></a>
                     </div>
                 </div>
                 <div class="work-right">
@@ -67,28 +67,28 @@ get_header();
             
             <div class="purpose-grid">
                 <!-- Card 1 -->
-                <div class="purpose-card text-mask">
+                <div class="purpose-card text-mask card-reveal">
                     <div class="purpose-card-inner">
                         <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/aim-icon.svg' ); ?>" alt="Aim" class="purpose-icon">
                         <h4 class="purpose-title">STRATEGIC MANDATE SALES CAPABILITIES</h4>
                     </div>
                 </div>
                 <!-- Card 2 -->
-                <div class="purpose-card text-mask">
+                <div class="purpose-card text-mask card-reveal">
                     <div class="purpose-card-inner">
                         <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/handshake-icon.svg' ); ?>" alt="Handshake" class="purpose-icon">
                         <h4 class="purpose-title">ALIGNING DEVELOPER GOALS & BUYER ASPIRATIONS</h4>
                     </div>
                 </div>
                 <!-- Card 3 -->
-                <div class="purpose-card text-mask">
+                <div class="purpose-card text-mask card-reveal">
                     <div class="purpose-card-inner">
                         <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/network-icon.svg' ); ?>" alt="Network" class="purpose-icon">
                         <h4 class="purpose-title">EXCLUSIVE NETWORK FOR REFINED HOME BUYING</h4>
                     </div>
                 </div>
                 <!-- Card 4 -->
-                <div class="purpose-card text-mask">
+                <div class="purpose-card text-mask card-reveal">
                     <div class="purpose-card-inner">
                         <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/uptrend.svg' ); ?>" alt="Uptrend" class="purpose-icon">
                         <h4 class="purpose-title">CONSISTENT <br> SALES EXECUTION</h4>
@@ -111,7 +111,7 @@ get_header();
                     <div class="text-mask"><h2 class="section-title fs-xxl" style="margin-bottom: 0;">How We Deliver<br>Mandate Success</h2></div>
                 </div>
                 <div class="process-header-right">
-                    <a href="#" class="btn btn-primary"><span class="arrow-up-right"><svg width="1.2em" height="1.2em" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;"><path d="M6.27241 6H14.0504V13.778M13.1704 6.879L6.02441 14.026" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg></span> START YOUR JOURNEY</a>
+                    <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-primary"><span class="arrow-up-right"><svg width="1.2em" height="1.2em" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;"><path d="M6.27241 6H14.0504V13.778M13.1704 6.879L6.02441 14.026" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg></span> START YOUR JOURNEY</a>
                 </div>
             </div>
 
@@ -242,7 +242,7 @@ get_header();
                             ?>
                             <?php foreach ($success_projects as $index => $project) : ?>
                             <div class="swiper-slide">
-                                <div class="project-card">
+                                <div class="project-card card-reveal">
                                     <div class="project-image img-reveal">
                                         <img src="<?php echo esc_url($project['image']); ?>" alt="<?php echo esc_attr($project['title']); ?>">
                                     </div>
@@ -295,13 +295,13 @@ get_header();
                     </p>
                 </div>
                 <div class="text-mask" style="display: flex; justify-content: center;">
-                    <a href="#" class="btn btn-primary" style="font-size: 0.8rem; padding: 1rem 2rem; border: none;"><span class="arrow-up-right"><svg width="1.2em" height="1.2em" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;"><path d="M6.27241 6H14.0504V13.778M13.1704 6.879L6.02441 14.026" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg></span> START YOUR JOURNEY</a>
+                    <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-primary" style="font-size: 0.8rem; padding: 1rem 2rem; border: none;"><span class="arrow-up-right"><svg width="1.2em" height="1.2em" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;"><path d="M6.27241 6H14.0504V13.778M13.1704 6.879L6.02441 14.026" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg></span> START YOUR JOURNEY</a>
                 </div>
             </div>
 
             <div class="reviews-grid">
                 <!-- Large Review Card -->
-                <div class="review-card large-card text-mask">
+                <div class="review-card large-card text-mask card-reveal">
                     <div class="quote-mark">”</div>
                     <div class="review-content" style="position: relative; z-index: 2;">
                         <p class="reviewer-meta"><span class="diamond-icon">◆</span> DEVELOPER PARTERN'S NAME, MK IMPERIALS</p>
@@ -312,7 +312,7 @@ get_header();
 
                 <!-- Right Column (Stacked Cards) -->
                 <div class="reviews-right-col">
-                    <div class="review-card text-mask">
+                    <div class="review-card text-mask card-reveal">
                         <div class="quote-mark">”</div>
                         <div class="review-content" style="position: relative; z-index: 2;">
                             <p class="reviewer-meta"><span class="diamond-icon">◆</span> DEVELOPER PARTERN'S NAME, MK IMPERIALS</p>
@@ -321,7 +321,7 @@ get_header();
                         </div>
                     </div>
 
-                    <div class="review-card text-mask">
+                    <div class="review-card text-mask card-reveal">
                         <div class="quote-mark">”</div>
                         <div class="review-content" style="position: relative; z-index: 2;">
                             <p class="reviewer-meta"><span class="diamond-icon">◆</span> DEVELOPER PARTERN'S NAME, MK IMPERIALS</p><br>
