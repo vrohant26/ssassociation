@@ -21,7 +21,7 @@ get_header();
                     <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/logo-white.svg' ); ?>" alt="S&S Associates Logo" class="hero-brand-img" >
                 </div>
                 
-                <h1 class="hero-title fs-xxxl">Service. Value. Transparency</h1>
+                <h1 class="hero-title fs-xxxl">Service. Values. Transparency</h1>
                 <p class="hero-subtitle fs-md">Backed by a network of <b> 300+ channel partners </b>, we deliver structured sales execution and consistent project outcomes.</p>
                 
                 <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="hero-cta">
