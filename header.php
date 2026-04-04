@@ -41,7 +41,7 @@
             
             <div class="fp-image-col">
                 <div class="fp-image-wrapper menu-img-reveal">
-                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/Aerial Highway City Photo.webp' ); ?>" alt="City View">
+                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/aerial-highway-city.webp' ); ?>" alt="City View">
                 </div>
                 <div class="fp-image-meta">
                     <div class="fp-socials">

@@ -29,7 +29,7 @@
                         'step'  => 'STEP 01',
                         'title' => 'Mandate Evaluation & Strategic Alignment',
                         'desc'  => 'We begin by evaluating the project\'s market potential, defining positioning, pricing logic, and sales objectives to ensure complete alignment before execution begins.',
-                        'img'   => get_template_directory_uri() . '/assets/images/Step 1 process.png'
+                        'img'   => get_template_directory_uri() . '/assets/images/step-1-process.png'
                     ],
                     [
                         'step'  => 'STEP 02',

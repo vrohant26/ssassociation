@@ -8,7 +8,7 @@ get_header();
         <!-- Hero Background Slider -->
         <div class="swiper hero-bg-swiper" style="position: absolute; top:0; left:0; width:100%; height:100%; z-index:0;">
             <div class="swiper-wrapper">
-                <div class="swiper-slide bg-slide" style="background-image: url('<?php echo esc_url( get_template_directory_uri() . '/assets/images/Mumbai.webp' ); ?>'); background-size: cover; background-position: center;"></div>
+                <div class="swiper-slide bg-slide" style="background-image: url('<?php echo esc_url( get_template_directory_uri() . '/assets/images/mumbai.webp' ); ?>'); background-size: cover; background-position: center;"></div>
                 <div class="swiper-slide bg-slide" style="background-image: url('<?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-image-2.jpeg' ); ?>'); background-size: cover; background-position: center;"></div>
             </div>
         </div>
@@ -36,7 +36,7 @@ get_header();
             <div class="hero-featured-card">
                 <div class="card-image-wrap">
                     <!-- Placeholder representing the project blueprint image in design -->
-                   <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/Elysium Project Thumbnail.png' ); ?>" alt="Elysium Project Thumbnail" style="width: 100%; height: 100%; object-fit: cover;">
+                   <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/elysium-thumbnail.png' ); ?>" alt="Elysium Project Thumbnail" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
                 <div class="card-content">
                     <h3 class="card-title">Elysium – Contemporary Urban Living</h3>
@@ -70,7 +70,7 @@ get_header();
                 <!-- Col 1 -->
                 <div class="stat-card">
                     <div class="stat-image-wrap img-reveal">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/about image 1.webp' ); ?>" alt="Office Space">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/about-image-1.webp' ); ?>" alt="Office Space">
                     </div>
                     <div class="stat-content">
                         <div class="text-mask"><h4 class="stat-heading fs-sm">10+ YEARS OF TRUSTED GUIDANCE</h4></div>
@@ -81,7 +81,7 @@ get_header();
                 <!-- Col 2 -->
                 <div class="stat-card">
                     <div class="stat-image-wrap img-reveal">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/about image 2.webp' ); ?>" alt="Building">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/about-image-2.webp' ); ?>" alt="Building">
                     </div>
                     <div class="stat-content">
                         <div class="text-mask"><h4 class="stat-heading fs-sm ">₹10 CR+ IN SUCCESSFULLY CLOSED RESIDENTIAL SALES</h4></div>
@@ -92,7 +92,7 @@ get_header();
                 <!-- Col 3 -->
                 <div class="stat-card">
                     <div class="stat-image-wrap img-reveal">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/About image 3.webp' ); ?>" alt="Apartment Complex">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/about-image-3.webp' ); ?>" alt="Apartment Complex">
                     </div>
                     <div class="stat-content">
                         <div class="text-mask"><h4 class="stat-heading fs-sm">600+ HOMES SUCCESSFULLY SOLD</h4></div>
@@ -117,16 +117,16 @@ get_header();
                     <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/elite.png' ); ?>" alt="Elite">
                 </div>
                 <div class="builder-logo-wrap img-reveal">
-                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/Matrix.png' ); ?>" alt="Matrix">
+                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/matrix.png' ); ?>" alt="Matrix">
                 </div>
                 <div class="builder-logo-wrap img-reveal">
-                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/Kripa Elite Background Removed.png' ); ?>" alt="Kripa Elite">
+                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/kripa-elite-no-bg.png' ); ?>" alt="Kripa Elite">
                 </div>
                 <div class="builder-logo-wrap img-reveal">
-                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/navrang elite.png' ); ?>" alt="Navrang Elite">
+                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/navrang-elite.png' ); ?>" alt="Navrang Elite">
                 </div>
                 <div class="builder-logo-wrap img-reveal">
-                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/mk matrix.png' ); ?>" alt="MK Matrix">
+                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/mk-matrix.png' ); ?>" alt="MK Matrix">
                 </div>
             </div>
         </div>

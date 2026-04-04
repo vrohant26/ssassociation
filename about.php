@@ -39,7 +39,7 @@ get_header();
                 </div>
                 <div class="work-right">
                     <div class="about-hero-image-wrap img-reveal">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/about hero image.png' ); ?>" alt="Office Space">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/about-hero-image.png' ); ?>" alt="Office Space">
                     </div>
                 </div>
             </div>

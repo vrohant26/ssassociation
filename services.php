@@ -30,7 +30,7 @@ get_header();
         <div class="banner-wrapper">
             <!-- Dark Cityscape Video Banner -->
             <video autoplay loop muted playsinline class="banner-video-full">
-                <source src="<?php echo esc_url( get_template_directory_uri() . '/assets/videos/Night Skyline Cityscape Video.webm' ); ?>" type="video/webm">
+                <source src="<?php echo esc_url( get_template_directory_uri() . '/assets/videos/night-skyline-video.webm' ); ?>" type="video/webm">
             </video>
         </div>
     </section>
@@ -72,7 +72,7 @@ get_header();
                         'title' => 'Mandate Evaluation & Strategic Alignment',
                         'desc' => 'We begin by evaluating the project’s market potential, defining positioning, pricing logic, and sales objectives to ensure complete alignment before execution begins.',
                         'result' => 'Clear alignment mapping before execution kicks off.',
-                        'image' => 'process_evaluation.png'
+                        'image' => 'step-1-process.png'
                     ],
                     [
                         'step' => '02',

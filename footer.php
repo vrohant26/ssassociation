@@ -8,7 +8,7 @@
     <footer class="site-footer">
         
         <!-- CTA Top Block -->
-        <div class="cta-section gsap-reveal-section" style="background-image: url('<?php echo esc_url( get_template_directory_uri() . '/assets/images/CTA Footer Background.png' ); ?>');">
+        <div class="cta-section gsap-reveal-section" style="background-image: url('<?php echo esc_url( get_template_directory_uri() . '/assets/images/cta-footer-bg.png' ); ?>');">
             <div class="container container-large" style="position: relative; z-index: 2;">
                 <div class="cta-content text-mask">
                     <h2 class=" fs-xxxl section-title">Looking for a Focused<br>Sales Mandate?</h2>
@@ -38,7 +38,7 @@
                 <div class="footer-grid">
                     
                     <div class="footer-logo-col text-mask">
-                        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/coloured logo.png' ); ?>" alt="S&S Associates" class="footer-logo">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/coloured-logo.png' ); ?>" alt="S&S Associates" class="footer-logo">
                         <p class="copyright">© <?php echo date('Y'); ?> S&S Associates. All rights reserved.</p>
                     </div>
 
@@ -78,7 +78,7 @@
                 </div>
                 
                 <div class="footer-watermark text-mask">
-                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/S&S ASSOCIATES.svg' ); ?>" alt="S&S Associates" class="footer-watermark-img">
+                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/ss-associates.svg' ); ?>" alt="S&S Associates" class="footer-watermark-img">
                 </div>
             </div>
         </div>

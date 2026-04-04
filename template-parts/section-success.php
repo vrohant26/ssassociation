@@ -42,14 +42,14 @@
                             $success_projects = [
                                 [
                                     'title' => 'Elysium',
-                                    'image' => get_template_directory_uri() . '/assets/images/Elysium Project Thumbnail.png',
+                                    'image' => get_template_directory_uri() . '/assets/images/elysium-thumbnail.png',
                                     'launched' => '2026',
                                     'units_released' => '72',
                                     'units_sold' => '51 Units Sold in 5 Months'
                                 ],
                                 [
                                     'title' => 'MK Imperial',
-                                    'image' => get_template_directory_uri() . '/assets/images/MK Imperial Thumbnail.png',
+                                    'image' => get_template_directory_uri() . '/assets/images/mk-imperial-thumbnail.png',
                                     'launched' => '2025',
                                     'units_released' => '84',
                                     'units_sold' => '60 Units Sold in 5 Months'
