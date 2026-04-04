@@ -422,7 +422,7 @@ button {
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
+    gap: 1rem;
 }
 
 .stat-card {
@@ -981,16 +981,20 @@ button {
     opacity: 0.85;
 }
 
-.quote-mark {
+.quote-svg {
     position: absolute;
-    top: 1rem;
-    right: 2rem;
-    font-size: 12rem;
-    line-height: 1;
-    font-family: Georgia, serif;
-    color: #ffffff;
+    right: 3rem;
     opacity: 0.15;
-    pointer-events: none;
+    scale: 5;
+}
+
+.quote-svg-large {
+    top: 6rem;
+}
+
+.quote-svg-small {
+    top: 2rem;
+    scale: 3;
 }
 
 /* --- Team Section --- */
@@ -1096,6 +1100,21 @@ button {
     opacity: 0.7;
     color: #1A1A1A;
     margin-top: 8rem;
+}
+
+.footer-menu li {
+    list-style: none;
+    margin-bottom: 0.5rem;
+}
+
+.footer-menu li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #1A1A1A;
+}
+
+.footer-legal-title {
+    margin-top: 2rem;
 }
 
 .footer-links-col {
@@ -1299,6 +1318,7 @@ button {
 /* --- End About Page Styles --- */
 
 @media (max-width: 992px) {
+
     .trusted-builders-section {
         padding: 3rem 1.5rem;
     }
@@ -1376,9 +1396,6 @@ button {
         margin-bottom: 1.5rem;
     }
 
-    .quote-mark {
-        font-size: 8rem;
-    }
 
     .process-section {
         padding: 4rem 1.5rem;
@@ -1478,6 +1495,16 @@ button {
     transition: border-color 0.3s ease;
     cursor: pointer;
     border-radius: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.close-icon {
+    font-size: 1em;
+    margin-right: 0.5rem;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
 }
 
 .btn-close-menu:hover {
@@ -1551,7 +1578,7 @@ button {
     max-width: 500px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-end;
 }
 
 .fp-socials {
@@ -1719,18 +1746,54 @@ button {
 
 .services-hero-container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    text-align: center;
     padding: 12rem 4rem 6rem;
-    gap: 4rem;
 }
 
-.services-hero-left {
-    flex: 0 0 55%;
+.services-hero-content {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .services-hero-desc {
-    max-width: 700px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.8;
+    max-width: 800px;
+    margin: 2rem auto 0;
+    text-align: center;
+}
+
+.banner-video-full {
+    object-fit: cover;
+    width: 100%;
+    height: 70vh;
+}
+
+.section-title-bordered {
+    margin-bottom: 6rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 2rem;
+}
+
+.contact-hero-tag {
+    justify-content: center;
+}
+
+.contact-submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-submit-btn svg {
+    margin-left: 10px;
 }
 
 
@@ -1752,6 +1815,7 @@ button {
     background-color: black;
     color: var(--text-light);
     padding: 3rem 4rem;
+    margin-top: -10px;
 }
 
 .services-stats-grid {
@@ -1985,8 +2049,8 @@ button {
 .contact-form-wrapper {
     background-color: #fff;
     padding: 4rem;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+    border: 2px solid rgb(195 156 84 / 33%);
+    border-radius: 10px;
 }
 
 /* Form Fields */
@@ -2110,4 +2174,36 @@ button {
 
 .text-align-center {
     text-align: center;
+}
+
+/* ========================================================================= */
+/* --- FLOATING WHATSAPP BUTTON --- */
+/* ========================================================================= */
+
+.whatsapp-float {
+    opacity: 0;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background-color: #25D366;
+    color: #ffffff;
+    border-radius: 50%;
+    text-decoration: none;
+
+}
+
+
+@media (max-width: 768px) {
+    .whatsapp-float {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: 48px;
+        height: 48px;
+    }
 }

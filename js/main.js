@@ -292,9 +292,6 @@ document.addEventListener("DOMContentLoaded", function () {
       loop: true,
       speed: 600,
       effect: "slide",
-      // fadeEffect: {
-      //   crossFade: true,
-      // },
       navigation: {
         nextEl: ".process-next",
         prevEl: ".process-prev",
@@ -336,6 +333,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ) {
     // ---- Targets ----
     const heroBg = document.querySelector(".hero-bg-swiper");
+    const swiperWrapper = document.querySelector(".swiper-wrapper");
     const heroBrand = document.querySelector(".hero-brand");
     const heroTitle = document.querySelector(".hero-title");
     const heroSub = document.querySelector(".hero-subtitle");
@@ -383,7 +381,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const ctaInner = wrapInner(heroCta, "entry-cta-inner");
 
     // ---- Set initial hidden states ----
-    gsap.set(heroBg, { scale: 0.5, transformOrigin: "center center" });
+    gsap.set(heroBg, {
+      clipPath: "inset(35% round 1rem)",
+    });
+    gsap.set(swiperWrapper, {
+      scale: 1.2,
+    });
     gsap.set(siteHeader, { yPercent: -100, opacity: 0 });
     gsap.set(brandInner, { yPercent: 110 });
     gsap.set(ctaInner, { yPercent: 110 });
@@ -396,7 +399,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
     entryTl
       // 1. BG scales from 0.5 → 1
-      .to(heroBg, { scale: 1, duration: 1.8, ease: "expo.inOut" })
+      .to(
+        heroBg,
+        {
+          clipPath: "inset(0% round 0rem)",
+          duration: 1.5,
+          ease: "expo.inOut",
+        },
+        "0",
+      )
+      .to(
+        swiperWrapper,
+        {
+          scale: 1,
+          duration: 1.5,
+          ease: "expo.inOut",
+        },
+        "0",
+      )
 
       // 2. Header slides down
       .to(
@@ -437,6 +457,11 @@ document.addEventListener("DOMContentLoaded", function () {
       )
       .to(
         mouseScroll,
+        { opacity: 1, duration: 1.0, ease: "expo.inOut" },
+        "<0.1",
+      )
+      .to(
+        ".whatsapp-float",
         { opacity: 1, duration: 1.0, ease: "expo.inOut" },
         "<0.1",
       );

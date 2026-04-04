@@ -48,7 +48,7 @@ get_header();
         <div class="container">
             <div class="contact-hero-content">
                 <div class="text-mask">
-                    <div class="section-tag contact-section-tag">
+                    <div class="section-tag contact-section-tag contact-hero-tag">
                         <span class="diamond-icon">◆</span> GET IN TOUCH
                     </div>
                 </div>
@@ -92,7 +92,7 @@ get_header();
                     <div class="text-mask">
                         <div class="contact-info-block">
                             <h4 class="contact-info-label">Socials : </h4>
-                            <a href="#" style="color: var(--text-dark);"> Instagram </a>
+                            <a target="_blank" href="https://www.instagram.com/s_sassociates17/" class="contact-email-link">Instagram</a>
                         </div>
                     </div>
                 </div>
@@ -132,9 +132,9 @@ get_header();
                                 <textarea id="message" name="message" rows="4" required class="form-input form-textarea" placeholder="Tell us about your mandate..."></textarea>
                             </div>
 
-                            <button type="submit" name="submit_contact" class="btn btn-primary form-submit-btn">
+                            <button type="submit" name="submit_contact" class="btn btn-primary form-submit-btn contact-submit-btn">
                                 SUBMIT INQUIRY
-                                <span class="arrow-up-right" style="margin-left: 10px;">
+                                <span class="arrow-up-right">
                                     <svg width="1.2em" height="1.2em" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;">
                                         <path d="M6.27241 6H14.0504V13.778M13.1704 6.879L6.02441 14.026" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
                                     </svg>
