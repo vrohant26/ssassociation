@@ -12,16 +12,18 @@
                 
                 <!-- Left Content -->
                 <div class="success-content">
-                    <div class="text-mask">
-                        <div class="section-tag">
-                            <span class="diamond-icon">◆</span> SUCCESS STORIES
+                    <div class="success-text-block">
+                        <div class="text-mask">
+                            <div class="section-tag">
+                                <span class="diamond-icon">◆</span> SUCCESS STORIES
+                            </div>
                         </div>
-                    </div>
-                    <div class="text-mask">
-                        <h2 class="section-title fs-xxl" style="margin-bottom: 1.5rem;">Select Residential Projects Under Exclusive Mandates</h2>
-                    </div>
-                    <div class="text-mask">
-                        <p class="section-desc fs-md">A curated portfolio of residential developments delivered through focused mandates and disciplined sales execution.</p>
+                        <div class="text-mask">
+                            <h2 class="section-title fs-xxl" style="margin-bottom: 1.5rem;">Select Residential Projects Under Exclusive Mandates</h2>
+                        </div>
+                        <div class="text-mask">
+                            <p class="section-desc fs-md">A curated portfolio of residential developments delivered through focused mandates and disciplined sales execution.</p>
+                        </div>
                     </div>
                     
                     <div class="slide-nav success-nav">
@@ -43,6 +45,7 @@
                                 [
                                     'title' => 'Elysium',
                                     'image' => get_template_directory_uri() . '/assets/images/elysium-thumbnail.png',
+                                    'location' => 'Tilak Nagar',
                                     'launched' => '2026',
                                     'units_released' => '72',
                                     'units_sold' => '51 Units Sold in 5 Months'
@@ -50,9 +53,66 @@
                                 [
                                     'title' => 'MK Imperial',
                                     'image' => get_template_directory_uri() . '/assets/images/mk-imperial-thumbnail.png',
+                                    'location' => 'Vikhroli (E)',
                                     'launched' => '2025',
                                     'units_released' => '84',
                                     'units_sold' => '60 Units Sold in 5 Months'
+                                ],
+                                [
+                                    'title' => 'Vrindavan',
+                                    'image' => get_template_directory_uri() . '/assets/images/vrindavan-optimized.jpg',
+                                    'location' => 'Vikhroli',
+                                    'launched' => '2025',
+                                    'units_released' => '100+',
+                                    'units_sold' => '100+'
+                                ],
+                                [
+                                    'title' => 'MK OASIS',
+                                    'image' => get_template_directory_uri() . '/assets/images/mk-oasis-optimized.jpg',
+                                    'location' => 'Kannwar Nagar, Vikhroli',
+                                    'launched' => '2025',
+                                    'units_released' => '90',
+                                    'units_sold' => '90'
+                                ],
+                                [
+                                    'title' => 'MK Emrald',
+                                    'image' => get_template_directory_uri() . '/assets/images/mk-emrald-optimized.jpg',
+                                    'location' => 'Kannwar Nagar, Vikhroli',
+                                    'launched' => '2025',
+                                    'units_released' => '100+',
+                                    'units_sold' => '100+'
+                                ],
+                                [
+                                    'title' => 'Pearn Grace',
+                                    'image' => get_template_directory_uri() . '/assets/images/coming-soon.png',
+                                    'location' => 'Kurla',
+                                    'launched' => 'Upcoming',
+                                    'units_released' => '---',
+                                    'units_sold' => '---'
+                                ],
+                                [
+                                    'title' => 'Narang Elite',
+                                    'image' => get_template_directory_uri() . '/assets/images/coming-soon.png',
+                                    'location' => 'Pestom Sagar',
+                                    'launched' => 'Upcoming',
+                                    'units_released' => '---',
+                                    'units_sold' => '---'
+                                ],
+                                [
+                                    'title' => 'MK Crown',
+                                    'image' => get_template_directory_uri() . '/assets/images/coming-soon.png',
+                                    'location' => 'Tagore Nagar, Vikhroli',
+                                    'launched' => 'Upcoming',
+                                    'units_released' => '---',
+                                    'units_sold' => '---'
+                                ],
+                                [
+                                    'title' => 'MK Harmony',
+                                    'image' => get_template_directory_uri() . '/assets/images/coming-soon.png',
+                                    'location' => 'Kannwar Nagar, Vikhroli',
+                                    'launched' => 'Upcoming',
+                                    'units_released' => '---',
+                                    'units_sold' => '---'
                                 ]
                             ];
                             ?>
@@ -69,6 +129,10 @@
                                         </div>
                                         <div class="project-stats">
                                             <div class="stat-row">
+                                                <span class="stat-label">LOCATION :</span>
+                                                <span class="stat-value"><?php echo esc_html($project['location']); ?></span>
+                                            </div>
+                                            <div class="stat-row">
                                                 <span class="stat-label">LAUNCHED IN :</span>
                                                 <span class="stat-value"><?php echo esc_html($project['launched']); ?></span>
                                             </div>
@@ -78,7 +142,12 @@
                                             </div>
                                             <div class="stat-row">
                                                 <span class="stat-label">UNITS SOLD:</span>
-                                                <span class="stat-value"><span class="trend-icon"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/uptrend.svg' ); ?>" alt="Uptrend"></span> <?php echo esc_html($project['units_sold']); ?></span>
+                                                <span class="stat-value">
+                                                    <?php if ($project['units_sold'] !== '---') : ?>
+                                                        <span class="trend-icon"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/uptrend.svg' ); ?>" alt="Uptrend"></span> 
+                                                    <?php endif; ?>
+                                                    <?php echo esc_html($project['units_sold']); ?>
+                                                </span>
                                             </div>
                                         </div>
                                     </div>

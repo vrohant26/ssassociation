@@ -303,16 +303,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     const successSwiper = new Swiper(".success-swiper", {
-      slidesPerView: 1,
-      spaceBetween: 30,
+      slidesPerView: 1.15,
+      spaceBetween: 16,
       loop: false,
       speed: 600,
       breakpoints: {
         768: {
-          slidesPerView: 1.5,
+          slidesPerView: 2.2, // Show hint of 3rd on tablet
+          spaceBetween: 20,
         },
         1200: {
-          slidesPerView: 1.4,
+          slidesPerView: 4, // Exactly 4 on desktop
+          spaceBetween: 24,
         },
       },
       navigation: {

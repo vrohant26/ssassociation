@@ -40,7 +40,7 @@ get_header();
                 </div>
                 <div class="card-content">
                     <h3 class="card-title">Elysium – Contemporary Urban Living</h3>
-                    <p class="card-subtitle">Launched in : 2026<br>51 units sold in 5 months</p>
+                    <p class="card-subtitle">Launched in : 2026<br>Location : Tilak Nagar<br>51 units sold in 5 months</p>
                 </div>
             </div>
         </div>

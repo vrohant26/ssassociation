@@ -356,7 +356,7 @@ button {
 .card-subtitle {
     font-size: 0.9rem;
     opacity: 0.7;
-    margin-bottom: 1.5rem;
+
     line-height: 1.4;
 }
 
@@ -502,9 +502,7 @@ button {
         height: 120px;
     }
 
-    .card-subtitle {
-        margin-bottom: 0.5rem;
-    }
+
 
     .card-content {
         padding: 0.5rem;
@@ -804,22 +802,30 @@ button {
 
 .success-stories-wrapper {
     display: flex;
-    gap: 4rem;
-    align-items: center;
+    flex-direction: column;
+
 }
 
 .success-content {
-    flex: 0 0 50%;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2rem;
+}
+
+.success-text-block {
+    flex: 0 0 65%;
 }
 
 .success-nav {
-    margin-top: 3rem;
+    margin-top: 0;
+    margin-bottom: 4.5rem;
 }
 
 .success-carousel {
-    flex: 1;
+    width: 100%;
     min-width: 0;
 }
 
@@ -1327,20 +1333,31 @@ button {
         padding: 4rem 1.5rem;
     }
 
-    .success-stories-wrapper {
-        flex-direction: column;
-        gap: 2.5rem;
-    }
+
 
     .success-content {
-        flex: 1 1 auto;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
         width: 100%;
+    }
+
+    .success-text-block {
+        flex: 0 0 100%;
+    }
+
+    .success-nav {
+        display: none;
     }
 
     .success-carousel {
-        width: 100%;
-        display: block;
+        width: calc(100% + 1.5rem);
+        margin-right: -1.5rem;
         min-width: 0;
+    }
+
+    .success-swiper {
+        overflow: visible;
     }
 
     .cta-section {
