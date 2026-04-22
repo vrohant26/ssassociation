@@ -75,7 +75,7 @@
                                     'units_sold' => '90'
                                 ],
                                 [
-                                    'title' => 'MK Emrald',
+                                    'title' => 'Mk Emerald',
                                     'image' => get_template_directory_uri() . '/assets/images/mk-emrald-optimized.jpg',
                                     'location' => 'Kannwar Nagar, Vikhroli',
                                     'launched' => '2025',
@@ -83,7 +83,7 @@
                                     'units_sold' => '100+'
                                 ],
                                 [
-                                    'title' => 'Pearn Grace',
+                                    'title' => 'Pearl Grace',
                                     'image' => get_template_directory_uri() . '/assets/images/coming-soon.png',
                                     'location' => 'Kurla',
                                     'launched' => 'Upcoming',
@@ -91,7 +91,7 @@
                                     'units_sold' => '---'
                                 ],
                                 [
-                                    'title' => 'Narang Elite',
+                                    'title' => 'Navrang Elite',
                                     'image' => get_template_directory_uri() . '/assets/images/coming-soon.png',
                                     'location' => 'Pestom Sagar',
                                     'launched' => 'Upcoming',
