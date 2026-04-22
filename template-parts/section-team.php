@@ -27,7 +27,7 @@
                     <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/ss-associates-director.jpeg' ); ?>" alt="Director" style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%);">
                 </div>
                 <div class="text-mask">
-                    <h4 class="director-name" style="font-size: 1rem; color: #1f1f1f; font-weight: 700; margin: 0; display: flex; align-items: center; gap: 0.5rem; letter-spacing: 0.05em;"><span style="color: black;">Prateek Ghag</span> <span style="font-size: 0.75rem; color: #666; font-weight: 600;">/ SALES REPRESENTATIVE</span></h4>
+                    <h4 class="director-name" style="font-size: 1rem; color: #1f1f1f; font-weight: 700; margin: 0; display: flex; align-items: center; gap: 0.5rem; letter-spacing: 0.05em;"><span style="color: black;">Prateek Ghag</span> <span style="font-size: 0.75rem; color: #666; font-weight: 600;">/ Director</span></h4>
                 </div>
             </div>
         </div>
